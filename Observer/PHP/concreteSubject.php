@@ -25,7 +25,7 @@
     {
       foreach ($this->_observers as $observer)
       {
-        $observer->update($this);
+        $observer->update($this->_value);
       }
     }
 

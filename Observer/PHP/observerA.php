@@ -1,9 +1,16 @@
 <?php
   class ObserverA implements Observer
   {
-    public function update(Subject $subject)
+    private $_value;
+
+    public function update($value)
     {
-      echo "observer A value is " . $subject->getValue() . "\n";
+      $this->_value = $value;
+      $this->display();
+    }
+
+    public function display() {
+      echo "Observer A value is " . $this->_value . "\n";
     }
   }
 ?>

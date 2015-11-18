@@ -1,5 +1,5 @@
 <?php
   interface Observer {
-    public function update(Subject $subject);
+    public function update($value);
   }
 ?>
