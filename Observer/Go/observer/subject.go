@@ -1,7 +1,6 @@
 package observer
 
-type Subject interface
-{
-  RegisterObserver(ob Observer)
-  Notify()
+type Subject interface {
+	RegisterObserver(ob Observer)
+	Notify()
 }
