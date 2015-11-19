@@ -2,12 +2,10 @@ package decorator
 
 type Mocha struct {
   *Condiment
-  price float64
-  description string
 }
 
 func NewMocha(beverage beverage) *Mocha {
-  return &Mocha{&Condiment{beverage: beverage}, 0.2, "Mocha"}
+  return &Mocha{&Condiment{beverage: beverage, price: 0.2, description: "Mocha"}}
 }
 
 func (self *Mocha) Cost() float64 {

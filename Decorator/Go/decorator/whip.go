@@ -2,12 +2,10 @@ package decorator
 
 type Whip struct {
   *Condiment
-  price float64
-  description string
 }
 
 func NewWhip(beverage beverage) *Whip {
-  return &Whip{&Condiment{beverage: beverage}, 0.9, "Whip"}
+  return &Whip{&Condiment{beverage: beverage, price: 0.9, description: "Whip"}}
 }
 
 func (self *Whip) Cost() float64 {

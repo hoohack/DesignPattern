@@ -2,18 +2,16 @@ package decorator
 
 type HouseBlend struct {
   *Coffee
-  price float64
-  description string
 }
 
 func NewHouseBlend() *HouseBlend {
-  return &HouseBlend{&Coffee{}, 3.0, "HouseBlend"}
+  return &HouseBlend{&Coffee{price: 3.0, description: "HouseBlend"}}
 }
 
 func (self *HouseBlend) Cost() float64 {
-  return self.price + self.Coffee.Cost()
+  return self.price
 }
 
 func (self *HouseBlend) GetDescription() string {
-  return self.description + self.Coffee.GetDescription()
+  return self.description
 }

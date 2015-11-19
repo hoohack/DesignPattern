@@ -2,12 +2,10 @@ package decorator
 
 type Soy struct {
   *Condiment
-  price float64
-  description string
 }
 
 func NewSoy(beverage beverage) *Soy {
-  return &Soy{&Condiment{beverage: beverage}, 1.2, "Soy"}
+  return &Soy{&Condiment{beverage: beverage, price: 1.2, description: "Soy"}}
 }
 
 func (self *Soy) Cost() float64 {
