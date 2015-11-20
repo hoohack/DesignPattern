@@ -1,5 +1,5 @@
 package factorymethod
 
-type PhoneFactory struct {
-  psale phoneSale
+type PhoneFactory interface {
+  createPhone() Phone
 }

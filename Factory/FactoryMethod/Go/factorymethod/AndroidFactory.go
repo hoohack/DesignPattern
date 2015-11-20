@@ -1,15 +1,9 @@
 package factorymethod
 
 type AndroidFactory struct {
-  *PhoneFactory
+  PhoneFactory
 }
 
-func (this *AndroidFactory) CreatePhone(ptype string) phoneProduct {
-  if ptype == "samsung" {
-    return NewSamsung()
-  } else if ptype == "xiaomi"{
-    return NewXiaoMi()
-  } else {
-    return nil
-  }
+func (this *AndroidFactory) CreatePhone() phoneProduct {
+  return NewAndroid()
 }

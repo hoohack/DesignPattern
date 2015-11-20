@@ -10,12 +10,12 @@ func main() {
   androidFactory := &factorymethod.AndroidFactory{}
   otherFactory := &factorymethod.OtherFactory{}
 
-  iphone := iphoneFactory.CreatePhone("6")
+  iphone := iphoneFactory.CreatePhone()
   fmt.Printf("Get phone %s \n", iphone.GetName())
 
-  android := androidFactory.CreatePhone("samsung")
+  android := androidFactory.CreatePhone()
   fmt.Printf("Get phone %s \n", android.GetName())
 
-  other := otherFactory.CreatePhone("blackberry")
+  other := otherFactory.CreatePhone()
   fmt.Printf("Get phone %s \n", other.GetName())
 }
