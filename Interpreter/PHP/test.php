@@ -10,7 +10,7 @@
       require_once './Calculator.php';
 
 
-      $statement = "3 * 2 + 4";
+      $statement = "3 * 2 * 4";
 
       $calculator = new Calculator();
 
