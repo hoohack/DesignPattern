@@ -10,5 +10,5 @@ func main() {
   calculator := &interpreter.Calculator{Symbol_arr: [5]string{"+", "-", "*", "/", "%"}}
   calculator.Init(statement)
   result := calculator.Compute()
-  fmt.Printf("%s = %d", statement, result)
+  fmt.Printf("%s = %d\n", statement, result)
 }

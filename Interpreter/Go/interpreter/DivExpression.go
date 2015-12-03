@@ -9,5 +9,5 @@ func NewDivExpression(Left Expression, Right Expression) *DivExpression {
 }
 
 func (this *DivExpression) Calculate() int {
-  return this.SymbolExpression.Left.Calculate() + this.SymbolExpression.Right.Calculate()
+  return this.SymbolExpression.Left.Calculate() / this.SymbolExpression.Right.Calculate()
 }

@@ -9,5 +9,5 @@ func NewMulExpression(Left Expression, Right Expression) *MulExpression {
 }
 
 func (this *MulExpression) Calculate() int {
-  return this.SymbolExpression.Left.Calculate() + this.SymbolExpression.Right.Calculate()
+  return this.SymbolExpression.Left.Calculate() * this.SymbolExpression.Right.Calculate()
 }

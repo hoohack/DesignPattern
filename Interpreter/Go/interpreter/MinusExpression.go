@@ -9,5 +9,5 @@ func NewMinusExpression(Left Expression, Right Expression) *MinusExpression {
 }
 
 func (this *MinusExpression) Calculate() int {
-  return this.SymbolExpression.Left.Calculate() + this.SymbolExpression.Right.Calculate()
+  return this.SymbolExpression.Left.Calculate() - this.SymbolExpression.Right.Calculate()
 }

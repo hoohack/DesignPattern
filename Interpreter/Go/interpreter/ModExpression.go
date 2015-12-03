@@ -9,5 +9,5 @@ func NewModExpression(Left Expression, Right Expression) *ModExpression {
 }
 
 func (this *ModExpression) Calculate() int {
-  return this.SymbolExpression.Left.Calculate() + this.SymbolExpression.Right.Calculate()
+  return this.SymbolExpression.Left.Calculate() % this.SymbolExpression.Right.Calculate()
 }
