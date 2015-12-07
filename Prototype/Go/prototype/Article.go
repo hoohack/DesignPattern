@@ -5,6 +5,10 @@ type Article struct {
   author *Author
 }
 
+func (this *Article) Clone() ArticleApi {
+  return this
+}
+
 func (this *Article) SetTitle(title string) {
   this.title = title
 }

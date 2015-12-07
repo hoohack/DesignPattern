@@ -4,10 +4,14 @@ type LifeArticle struct {
   *Article
 }
 
+func NewLifeArticle(title string) *LifeArticle {
+  return &LifeArticle{&Article{title: title}}
+}
+
 func (this *LifeArticle) Clone() ArticleApi {
   author := NewAuthor(this.author.GetName())
-  this.SetAuthor(author)
-  return this
+  title := this.Article.GetTitle()
+  return &LifeArticle{&Article{title: title, author: author}}
 }
 
 func (this *LifeArticle) SetAuthor(author *Author) {
