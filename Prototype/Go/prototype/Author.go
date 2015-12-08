@@ -15,3 +15,7 @@ func (this *Author) SetName(name string) {
 func (this *Author) GetName() string {
   return this.name
 }
+
+func (this *Author) Clone() *Author {
+  return &Author{name: this.name}
+}

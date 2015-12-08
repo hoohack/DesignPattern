@@ -1,23 +1,28 @@
 package prototype
 
 type LifeArticle struct {
-  *Article
-}
-
-func NewLifeArticle(title string) *LifeArticle {
-  return &LifeArticle{&Article{title: title}}
+  title string
+  author *Author
 }
 
 func (this *LifeArticle) Clone() ArticleApi {
-  author := NewAuthor(this.author.GetName())
-  title := this.Article.GetTitle()
-  return &LifeArticle{&Article{title: title, author: author}}
+  life_article := &LifeArticle{title: this.title}
+  life_article.SetAuthor(this.author.Clone())
+  return life_article
+}
+
+func (this *LifeArticle) SetTitle(title string) {
+  this.title = title
+}
+
+func (this *LifeArticle) GetTitle() string {
+  return this.title
 }
 
 func (this *LifeArticle) SetAuthor(author *Author) {
-  this.Article.author = author
+  this.author = author
 }
 
 func (this *LifeArticle) GetAuthor() *Author {
-  return this.Article.author
+  return this.author
 }
